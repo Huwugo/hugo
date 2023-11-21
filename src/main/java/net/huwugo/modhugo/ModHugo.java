@@ -2,6 +2,8 @@ package net.huwugo.modhugo;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.huwugo.modhugo.ModItems.ModItemGroups;
+import net.huwugo.modhugo.ModItems.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ public class ModHugo implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroup();
+		ModItems.registerModItems();
 	}
 }
