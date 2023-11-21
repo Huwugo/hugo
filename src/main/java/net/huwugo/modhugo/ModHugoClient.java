@@ -1,4 +1,11 @@
 package net.huwugo.modhugo;
 
-public class ModHugoClient {
+import net.fabricmc.api.ClientModInitializer;
+
+public class ModHugoClient implements ClientModInitializer {
+
+    @Override
+    public void onInitializeClient() {
+
+    }
 }

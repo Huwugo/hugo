@@ -2,6 +2,7 @@ package net.huwugo.modhugo.ModItems;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.huwugo.modhugo.ModHugo;
+import net.huwugo.modhugo.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -16,6 +17,15 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.FORK)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FORK);
                         entries.add(ModItems.SPOON);
+                        
+                    }).build());
+
+    public static final ItemGroup SAPPHIRE_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(ModHugo.MOD_ID, "sapphire"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sapphire"))
+                    .icon(() -> new ItemStack(ModBlocks.SAPPHIRE_BLOCK)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SAPPHIRE_BLOCK);
+                        
                     }).build());
 
     public static void registerItemGroup() {

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.huwugo.modhugo.ModItems.ModItemGroups;
 import net.huwugo.modhugo.ModItems.ModItems;
+import net.huwugo.modhugo.block.ModBlocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,5 +16,6 @@ public class ModHugo implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroup();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
