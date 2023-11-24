@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
     public static final ItemGroup CUTLERY = Registry.register(Registries.ITEM_GROUP,
             new Identifier(ModHugo.MOD_ID, "cutlery"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cutlery"))
+            FabricItemGroup.builder().displayName(Text.translatable("Cutlery"))
                     .icon(() -> new ItemStack(ModItems.FORK)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FORK);
                         entries.add(ModItems.SPOON);
@@ -22,7 +22,7 @@ public class ModItemGroups {
 
     public static final ItemGroup SAPPHIRE_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(ModHugo.MOD_ID, "sapphire"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sapphire"))
+            FabricItemGroup.builder().displayName(Text.translatable("Sapphire"))
                     .icon(() -> new ItemStack(ModBlocks.SAPPHIRE_BLOCK)).entries((displayContext, entries) -> {
                         entries.add(ModBlocks.SAPPHIRE_BLOCK);
                         

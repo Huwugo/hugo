@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"": {
+			"model": "modhugo:block/sapphire_block"
+		}
+	}
+}
