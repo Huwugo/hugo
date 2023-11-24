@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block SAPPHIRE_BLOCK = registerBlock("sapphire_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
