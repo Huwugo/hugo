@@ -11,19 +11,18 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item FORK = registerItem("fork", new Item(new FabricItemSettings()));
-    public static final Item SPOON = registerItem("spoon", new Item(new FabricItemSettings()));
-    public static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
-        entries.add(FORK);
-        entries.add(SPOON);
+    public static final Item FORK = registerItem("fork",
+            new Item(new FabricItemSettings()));
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, new Identifier(ModHugo.MOD_ID, name), item);
     }
 
-    public static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(ModHugo.MOD_ID, name), item);
+    private static void itemGroupIngredients(FabricItemGroupEntries entries) {
+        entries.add(FORK);
     }
     public static void registerModItems() {
         ModHugo.LOGGER.info("Registering mod items for" + ModHugo.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::itemGroupIngredients);
     }
 }

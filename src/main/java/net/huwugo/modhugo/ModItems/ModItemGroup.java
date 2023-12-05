@@ -10,13 +10,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ModItemGroups {
+public class ModItemGroup {
     public static final ItemGroup CUTLERY = Registry.register(Registries.ITEM_GROUP,
             new Identifier(ModHugo.MOD_ID, "cutlery"),
             FabricItemGroup.builder().displayName(Text.translatable("Cutlery"))
                     .icon(() -> new ItemStack(ModItems.FORK)).entries((displayContext, entries) -> {
                         entries.add(ModItems.FORK);
-                        entries.add(ModItems.SPOON);
                         
                     }).build());
 
